@@ -1,5 +1,5 @@
 function getResponseFromAPI() {
-  return new Promise(resolve => {
-    true;
-  })
+  return new Promise((resolve) => {
+    resolve('Fulfilled');
+  });
 }
