@@ -5,7 +5,7 @@ import asyncio
 
 
 async def wait_n(n, max_delay):
-  '''double awaiting'''
+    '''double awaiting'''
     task = []
     for _ in range(n):  
         task.append(wait_random(max_delay))
