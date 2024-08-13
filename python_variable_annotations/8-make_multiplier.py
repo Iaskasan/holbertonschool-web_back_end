@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from typing import Callable
+'''yes yes yo'''
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
