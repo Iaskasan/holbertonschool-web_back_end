@@ -4,7 +4,7 @@ import asyncio
 from random import uniform
 
 
-async def wait_random(max_delay=10):
+async def wait_random(max_delay: int = 10) -> float:
     '''waits for a random delay between 0 and input
     parameter then returns the delay as a float'''
     random_delay = uniform(0, max_delay)
