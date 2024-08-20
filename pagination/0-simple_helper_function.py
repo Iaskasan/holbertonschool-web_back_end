@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 '''simple index helper func'''
 
+
 def index_range(page: int, page_size: int) -> tuple:
     '''
     simple helper function that return the range
