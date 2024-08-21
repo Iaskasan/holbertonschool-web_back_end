@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 '''simple index helper func'''
 import csv
-import math
 from typing import List
 
 
@@ -18,7 +17,7 @@ def index_range(page: int, page_size: int) -> tuple:
 class Server:
     """Server class to paginate a database of popular baby names.
     """
-    DATA_FILE = "Popular_Baby_Names.csv"
+    DATA_FILE = "./Popular_Baby_Names.csv"
 
     def __init__(self):
         self.__dataset = None
@@ -35,4 +34,11 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        pass
+        """Returns the appropriate page of the dataset."""
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
+
+        start_idx, end_idx = index_range(page, page_size)
+
+        dataset = self.dataset()
+        return dataset[start_idx:end_idx]
