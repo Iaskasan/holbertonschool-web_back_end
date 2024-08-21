@@ -1,1 +1,2 @@
-#!/usr/bin/env python3
+// show all documents in the specified collection
+db.school.find()
