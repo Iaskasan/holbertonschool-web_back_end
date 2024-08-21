@@ -1,1 +1,2 @@
-#!/usr/bin/env python3
+// delete a specified item in  collection
+db.school.deleteMany({name: "Holberton school"})
