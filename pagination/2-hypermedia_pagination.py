@@ -18,7 +18,7 @@ def index_range(page: int, page_size: int) -> tuple:
 class Server:
     """Server class to paginate a database of popular baby names.
     """
-    DATA_FILE = "./Popular_Baby_Names.csv"
+    DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
         self.__dataset = None
@@ -42,6 +42,8 @@ class Server:
         start_idx, end_idx = index_range(page, page_size)
 
         dataset = self.dataset()
+        if start_idx >= len(dataset):
+            return []
         return dataset[start_idx:end_idx]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
