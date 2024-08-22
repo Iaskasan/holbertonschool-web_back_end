@@ -6,3 +6,4 @@ def insert_school(mongo_collection, **kwargs):
     '''insert new docs in the collection
     based on args passed to the function'''
     mongo_collection.insert(**kwargs)
+    return mongo_collection
