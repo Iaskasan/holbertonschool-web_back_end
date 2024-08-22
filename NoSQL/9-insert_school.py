@@ -7,5 +7,5 @@ def insert_school(mongo_collection, **kwargs):
     based on args passed to the function'''
     if mongo_collection is None:
         return None
-    returned_id = mongo_collection.insert(kwargs).inserted_id
-    return returned_id
+    result = mongo_collection.insert(kwargs)
+    return result.inserted_id
