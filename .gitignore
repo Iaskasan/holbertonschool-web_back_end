@@ -33,3 +33,5 @@ __pycache__
 
 babel.*
 .eslintrc.js
+*-main.js
+*-main_*.js
