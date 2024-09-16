@@ -30,3 +30,6 @@ node_modules
 *-main.py
 *.csv
 __pycache__
+
+babel.*
+.eslintrc.js
